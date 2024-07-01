@@ -1,6 +1,7 @@
 package com.safetynet.api.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.List;
@@ -96,6 +97,7 @@ class PersonControllerTest {
         var actual = testController.updatePerson(testPerson.getFirstName(), testPerson.getLastName(), expected)
                 .getBody();
         assertEquals(expected, actual);
+        assertNotEquals(testPerson, actual);
     }
 
     @Test

@@ -30,8 +30,6 @@ public class PersonService implements CRUDService<Person> {
                 .firstName(firstName)
                 .lastName(lastName)
                 .build();
-        updatePerson.setFirstName(firstName);
-        updatePerson.setLastName(lastName);
 
         return update(person, updatePerson);
     }

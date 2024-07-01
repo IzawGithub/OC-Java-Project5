@@ -31,8 +31,6 @@ public class MedicalRecordService implements CRUDService<MedicalRecord> {
                 .firstName(firstName)
                 .lastName(lastName)
                 .build();
-        updateMedicalRecord.setFirstName(firstName);
-        updateMedicalRecord.setLastName(lastName);
 
         return update(medicalRecord, updateMedicalRecord);
     }

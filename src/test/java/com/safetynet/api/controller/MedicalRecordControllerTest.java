@@ -3,6 +3,7 @@ package com.safetynet.api.controller;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -96,6 +97,7 @@ class MedicalRecordControllerTest {
                 .updateMedicalRecord(testMedicalRecord.getFirstName(), testMedicalRecord.getLastName(), expected)
                 .getBody();
         assertEquals(expected, actual);
+        assertNotEquals(testMedicalRecord, actual);
     }
 
     @Test
