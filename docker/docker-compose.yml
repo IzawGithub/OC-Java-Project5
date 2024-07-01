@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  safetynet:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    container_name: safetynet_openclassroom_5
+    ports:
+      - "443:8080"
+    restart: unless-stopped
